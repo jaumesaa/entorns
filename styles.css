@@ -15,22 +15,77 @@ body {
 
 .header-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    text-align: left; /* Canviat a left per alinear el text a l'esquerra */
+}
+
+
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.features {
+    background-color: white;
+    padding: 20px 0;
     text-align: center;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+
+.container-vistes {
+    display: flex; /* Assegura que els elements fills estiguin en fila */
+    flex-wrap: wrap; /* Permet que els elements es moguin a la següent línia si és necessari */
+    justify-content: center; /* Centra els elements horitzontalment */
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.container-vistes > div {
+    flex: 1 1 auto; /* Permet que els elements fills creixin i es redueixin segons sigui necessari */
+    margin: 10px;
+    max-width: calc(33.333% - 20px); /* Ajusta l'ample màxim per a tres elements per fila amb espai entre ells */
+    box-sizing: border-box;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc; /* Afegeix una vora */
+    border-radius: 5px; /* Afegeix cantonades arrodonides */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Afegeix una ombra */
+    background-color: #fff; /* Assegura que el fons sigui blanc */
+    padding: 10px; /* Afegeix espai interior */
+}
+
+.screenshot-item {
+    flex: 1 1 100%; /* Hace que cada elemento ocupe el 100% del ancho disponible */
+    margin: 10px;
+    max-width: 100%; /* Asegura que no exceda el 100% del contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    border: 1px solid #ccc; /* Afegeix una vora */
+    border-radius: 2vh; /* Afegeix cantonades arrodonides */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Afegeix una ombra */
+    background-color: #fff; /* Assegura que el fons sigui blanc */
+    padding: 10px; /* Afegeix espai interior */
 }
 
 .header-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: space-between;
+    width: 100%;
 }
+
+.text-content {
+    flex: 1;
+}
+
 
 .text-content h1 {
     margin: 0;
@@ -47,6 +102,8 @@ body {
 
 .buttons {
     margin-top: 20px;
+    display: flex;  /* Agregar esto para que los botones estén en fila */
+    justify-content: flex-start;  /* Alinea los botones a la izquierda */
 }
 
 .btn {
@@ -62,6 +119,7 @@ body {
     justify-content: center;
 }
 
+
 .btn i {
     margin-right: 8px;
 }
@@ -75,23 +133,22 @@ body {
     height: 100px;
 }
 
-.features {
-    background-color: white;
-    padding: 20px 0;
-    text-align: center;
-}
 
-.feature {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
+
 
 .feature .icon {
     font-size: 2em;
     color: #4caf50;
+    margin-top: 1vh;
 }
+
+.logo {
+    border-radius: 20%;
+    flex: 0;
+    margin-right: 0 auto;
+    
+}
+
 
 .feature h2 {
     margin: 10px 0 0;
@@ -108,25 +165,20 @@ body {
 }
 
 .screenshots h2 {
-    margin: 0 0 20px;
+    margin: 0 0 5vh;
 }
 
 .screenshot-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center; /* Centra els elements horitzontalment */
+    width: 100%;
 }
 
-.screenshot-item {
-    margin: 10px;
-    max-width: 200px;
-}
 
 .screenshot-item img {
     width: 100%;
     height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 .screenshot-item h3 {
@@ -147,12 +199,15 @@ body {
     margin-bottom: 20px;
 }
 
+/* Formulari centrat */
 .contact-form form {
-    max-width: 600px;
+    max-width: 50vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centra el formulari verticalment */
+    height: 50vh; /* Ajusta l'alçada segons sigui necessari */
 }
 
 .contact-form label {
@@ -170,10 +225,11 @@ body {
     border-radius: 5px;
 }
 
+/* Botó d'enviar amb borde negre */
 .contact-form .btn.submit {
     background-color: #4caf50;
     color: white;
-    border: none;
+    border: 2px solid black; /* Afegeix un borde negre */
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -185,14 +241,17 @@ body {
 }
 
 .footer {
-    background-color: #333;
+    background-color: #001f3f; /* Blau marí */
     color: white;
     padding: 10px 0;
-    text-align: center;
+    text-align: center; /* Assegura que el text estigui centrat */
 }
 
 .footer p {
     margin: 0;
+    width: 100%; /* Assegura que l'ample sigui del 100% */
+    text-align: center; /* Centra el text */
+    display: inline-block; /* Assegura que es comporti com un element inline-block */
 }
 
 @media (min-width: 768px) {
@@ -211,7 +270,7 @@ body {
     }
 
     .logo {
-        margin-left: 20px;
+        margin-left: auto;
     }
 
     .screenshot-list {
