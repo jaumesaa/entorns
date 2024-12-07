@@ -143,9 +143,11 @@ body {
 }
 
 .logo {
+    display: flex;
     border-radius: 20%;
     flex: 0;
     margin-right: 0 auto;
+    align-items: center;
     
 }
 
