@@ -44,7 +44,7 @@ body {
 .container-vistes {
     display: flex;
     justify-content: space-between;
-    margin: 1vh;
+    margin: 4vh;
     box-sizing: border-box;
     align-items: center;
     width: 98%;
