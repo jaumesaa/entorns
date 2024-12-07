@@ -8,7 +8,7 @@ body {
 .header {
     background: linear-gradient(90deg, #a5d6a7, #1b5e20);
     color: white;
-    padding: 20px 0;
+    padding: 1vh 0;
     text-align: center;
 }
 
@@ -20,7 +20,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-align: left; /* Canviat a left per alinear el text a l'esquerra */
+    text-align: left;
 }
 
 
@@ -35,16 +35,16 @@ body {
 .features {
     display: flex;
     background-color: white;
-    padding: 20px 0;
+    padding: 1.5vh 0;
     text-align: center;
     justify-content: center;
 }
 
 
 .container-vistes {
-    display: flex; /* Assegura que els elements fills estiguin en fila */
-    justify-content: space-between; /* Centra els elements horitzontalment */
-    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 1vh;
     box-sizing: border-box;
     align-items: center;
     width: 98%;
@@ -52,8 +52,8 @@ body {
 }
 
 .container-vistes > div {
-    flex: 1 1 auto; /* Permet que els elements fills creixin i es redueixin segons sigui necessari */
-    margin: 10px;
+    flex: 1 1 auto;
+    margin: 1vh;
     box-sizing: border-box;
     
 }
@@ -62,24 +62,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    border: 1px solid #ccc; /* Afegeix una vora */
-    border-radius: 5px; /* Afegeix cantonades arrodonides */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Afegeix una ombra */
-    background-color: #fff; /* Assegura que el fons sigui blanc */
-    padding: 10px; /* Afegeix espai interior */
+    padding: 1.5vh;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 10px;
 }
 
 .screenshot-item {
-    flex: 1 1 100%; /* Hace que cada elemento ocupe el 100% del ancho disponible */
+    flex: 1 1 100%;
     margin: 3vh 3vh 3vh 3vh;
-    max-width: 100%; /* Asegura que no exceda el 100% del contenedor */
-    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
-    border: 1px solid #ccc; /* Afegeix una vora */
-    border-radius: 1vh; /* Afegeix cantonades arrodonides */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Afegeix una ombra */
-    background-color: #fff; /* Assegura que el fons sigui blanc */
-    padding: 10px; /* Afegeix espai interior */
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 1vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 10px;
 }
 
 .header-content {
@@ -108,8 +108,8 @@ body {
 
 .buttons {
     margin-top: 20px;
-    display: flex;  /* Agregar esto para que los botones estén en fila */
-    justify-content: flex-start;  /* Alinea los botones a la izquierda */
+    display: flex;
+    justify-content: flex-start;
 }
 
 
@@ -161,11 +161,12 @@ body {
 
 .screenshots h2 {
     margin: 0 0 5vh;
+    padding-top: 4vh;
 }
 
 .screenshot-list {
-    display: flex; /* Asegura que los elementos estén uno al lado del otro */
-    align-items: stretch; /* Alinea todos los elementos a la misma altura */
+    display: flex;
+    align-items: stretch;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -186,24 +187,22 @@ body {
     margin: 0;
 }
 
-/* Importa la tipografía Roboto Mono desde Google Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 .contact-form {
     background-color: #fff;
     padding: 20px 0;
     text-align: center;
-    font-family: 'Roboto Mono', monospace; /* Aplica la tipografía Roboto Mono */
+    font-family: 'Roboto Mono', monospace;
 }
 
 .contact-form h2 {
     margin-bottom: 20px;
-    font-family: 'Roboto Mono', monospace; /* Aplica la tipografía Roboto Mono al título */
+    font-family: 'Roboto Mono', monospace;
 }
 
-.container-form {}
 
-/* Formulari centrat */
 .contact-form form {
     max-width: 50vh;
     margin: 0 auto;
@@ -211,8 +210,8 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: center; /* Centra el formulari verticalment */
-    height: 50vh; /* Ajusta l'alçada segons sigui necessari */
+    justify-content: center;
+    height: 50vh;
 }
 
 .contact-form input,
@@ -222,23 +221,21 @@ body {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Roboto Mono', monospace; /* Aplica la tipografía Roboto Mono en los campos */
+    font-family: 'Roboto Mono', monospace;
 }
 
-/* Estilo para el texto placeholder */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    font-family: 'Roboto Mono', monospace; /* Aplica la tipografía Roboto Mono al placeholder */
-    color: #888; /* Color del placeholder */
+    font-family: 'Roboto Mono', monospace;
+    color: #888;
 }
 
-/* Botón de enviar con borde negro */
 .contact-form .btn.submit {
     display: block;
     background-color: #4caf50;
     color: white;
-    border: 1px solid black; /* Para definir el color y el estilo */
-    border-width: 0.3vh 0.5vh 0.5vh 0.3vh; /* Para definir los grosores específicos */
+    border: 1px solid black;
+    border-width: 0.3vh 0.5vh 0.5vh 0.3vh;
     padding: 1vh 2vh;
     cursor: pointer;
     border-radius: 5px;
@@ -251,11 +248,11 @@ body {
 
 
 .footer {
-    background-color: #001f3f; /* Blau marí */
+    background-color: #001f3f;
     color: white;
     padding-top: 3vh;
     padding-bottom: 1vh;
-    text-align: center; /* Assegura que el text estigui centrat */
+    text-align: center;
 }
 
 .btn {
@@ -274,22 +271,22 @@ body {
 
 .footer p {
     margin: 0;
-    width: 100%; /* Assegura que l'ample sigui del 100% */
-    text-align: center; /* Centra el text */
-    display: inline-block; /* Assegura que es comporti com un element inline-block */
+    width: 100%;
+    text-align: center;
+    display: inline-block;
 }
 
 @media (max-width: 767px) {
     .header-container {
-        display: flex;                /* Asegúrate de que sea un contenedor flexible */
-        flex-direction: column;       /* Alinea los elementos en columna */
-        text-align: center;           /* Alinea el texto al centro */
-        justify-content: center;      /* Centra los elementos a lo largo del eje principal */
-        align-items: center;          /* Centra los elementos a lo largo del eje transversal */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
     
     .header-container > * {
-        margin: 10px 0;               /* Agrega un pequeño margen entre los elementos */
+        margin: 10px 0;
     }
     
     .container-vistes {
@@ -299,14 +296,14 @@ body {
 
 
     .header-content {
-        display: flex;                /* Asegúrate de que sea un contenedor flexible */
-        flex-direction: column;       /* Alinea los elementos en columna */
-        text-align: center;           /* Alinea el texto al centro */
-        justify-content: center;      /* Centra los elementos a lo largo del eje principal */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
         align-items: center;  
     }
     .header-content > * {
-        margin: 10px 0;               /* Agrega un pequeño margen entre los elementos */
+        margin: 10px 0;
     }
 
     .text-content {
@@ -316,21 +313,21 @@ body {
 
 
     .screenshot-list {
-        display: flex; /* Asegura que los elementos estén uno al lado del otro */
-        align-items: stretch; /* Alinea todos los elementos a la misma altura */
-        flex-direction: column; /* Cambiado a columna para móvil */
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
     .screenshot-item {
-        flex: 1 1 100%; /* Los items toman un 100% del ancho en móvil */
-        max-width: 30vh; /* No deben ser más anchos que el 100% */
-        box-sizing: border-box; /* Asegura que el padding no se sume al ancho */
+        flex: 1 1 100%;
+        max-width: 30vh;
+        box-sizing: border-box;
     }
     .buttons {
-        justify-content: center;     /* Centra los elementos horizontalmente */
-        align-items: center;         /* Centra los elementos verticalmente */
+        justify-content: center;
+        align-items: center;
         padding: 10px 0;
     }
     
